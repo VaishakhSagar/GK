@@ -1,0 +1,37 @@
+<header class="pull-left fullwidth pt-3 pb-3 body-bg">
+    <div class="container">
+        <div class="logo pull-left"><a class="d-block text-dark" href=""><span class="logo-img pull-left mr-2"><img class="img-fluid" src="assets/image/logo-main2.png" /></span><span class="b5">Green </span>Koncepts</a></div>
+        <div class="user-profile pull-right ">
+            <span class="logo-img pull-left mr-2">
+                <img class="img-fluid" src="assets/image/pro-pic.jpg" />
+            </span>Harry
+            <span class="ml-4 pointer" (click)="logout()">Logout</span>
+
+        </div>
+    </div>
+</header>
+<div class="dash-mian fullwidth pull-left h-100 pt-5 pb-5" *ngIf="selectedTile==''">
+    <div class="container">
+        <div class="col-lg-4 pull-left mt-4">
+            <a class="dash-body text-center border rounded" (click)="selectedTile='Hierarchy'">Hierarchy</a>
+        </div>
+        <div class="col-lg-4 pull-left mt-4">
+            <a class="dash-body text-center border rounded" (click)="selectedTile='Customer'">Customer</a>
+        </div>
+        <div class="col-lg-4 pull-left mt-4">
+            <a class="dash-body text-center border rounded" (click)="selectedTile='Orders'">Orders</a>
+        </div>
+        <div class="col-lg-4 pull-left mt-4">
+            <a class="dash-body text-center border rounded">Schedules</a>
+        </div>
+        <div class="col-lg-4 pull-left mt-4">
+            <a class="dash-body text-center border rounded">Messages</a>
+        </div>
+        <div class="col-lg-4 pull-left mt-4">
+            <a class="dash-body text-center border rounded">Email</a>
+        </div>
+    </div>
+</div>
+<app-heirarchy *ngIf="selectedTile=='Hierarchy'" (back)="backFun($event)"></app-heirarchy>
+<app-orders *ngIf="selectedTile=='Orders'" (back)="backFun($event)"></app-orders>
+<app-customers *ngIf="selectedTile=='Customer'" (back)="backFun($event)"></app-customers>

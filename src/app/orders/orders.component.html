@@ -1,0 +1,23 @@
+<div class="customer_page fullwidth h-100 pt-5 pb-5 pull-left">
+    <div class="container">
+        <h4 class="text-center w-100 mb-4"><button class="btn btn-primary pull-left" (click)="backFun()">Back</button>View Customer Details</h4>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col" class="bold">Customer</th>
+                    <th scope="col" class="bold">Order Date</th>
+                    <th scope="col" class="bold">Order Detail</th>
+                    <th scope="col" class="bold">Order Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let x of tableData">
+                    <th>{{x.customer.customerName}}</th>
+                    <th>{{x.orderDate}}</th>
+                    <th>{{x.orderDetail}}</th>
+                    <th>{{x.orderAmount}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

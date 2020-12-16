@@ -1,0 +1,40 @@
+<div class="customer_page fullwidth h-100 pt-5 pb-5 pull-left">
+    <div class="container">
+        <h4 class="text-center w-100 mb-4"><button class="btn btn-primary pull-left" (click)="backFun()">Back</button>Add Customer Details</h4>
+        <form class="customer_form m-auto" [formGroup]="customerForm">
+            <div class="section1 w-100 pull-left">
+                <div class="col-lg-4 pull-left">
+                    <h6 class="b4 fnt-14">Customer Name</h6>
+                </div>
+                <div class="col-lg-8 pull-left">
+                    <input type="text" formControlName="Name" class="fullwidth p-2 rounded sign-border mb-3" placeholder="Enter your name" />
+                </div>
+            </div>
+            <div class="section1 w-100 pull-left">
+                <div class="col-lg-4 pull-left">
+                    <h6 class="b4 fnt-14">Age</h6>
+                </div>
+                <div class="col-lg-8 pull-left">
+                    <input type="text" formControlName="Age" class="fullwidth p-2 rounded sign-border mb-3" placeholder="Enter your Age" />
+                </div>
+            </div>
+            <div class="section1 w-100 pull-left">
+                <div class="col-lg-4 pull-left">
+                    <h6 class="b4 fnt-14">Address</h6>
+                </div>
+                <div class="col-lg-8 pull-left">
+                    <textarea class="fullwidth p-2 rounded sign-border mb-3" formControlName="Address" placeholder="Enter your Address"></textarea>
+                </div>
+            </div>
+            <div class="section1 w-100 pull-left">
+                <div class="col-lg-6 pull-left text-center">
+                </div>
+                <div class="col-lg-6 pull-left text-center">
+                    <button class="btn btn-success cus_btn w-25" type="submit" (click)="save()">Save</button>
+
+                    <button class="btn btn-danger cus_btn ml-2 w-25" type="submit" (click)="backFun()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
